@@ -1,0 +1,2 @@
+17:19:26,855 [1] INFO - The area of the rectangle with sides 5.5 and 10 is 55
+17:19:26,866 [1] INFO - The area of the triangle with sides 3, 4 and 5 is 6
