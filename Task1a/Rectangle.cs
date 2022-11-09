@@ -8,9 +8,10 @@ namespace Task1a
 {
     class Rectangle : Shape
     {
-        public double Length;
-        public double Width;
-        private double area;
+        public double Length { get; set; }
+        public double Width { get; set; }
+
+        private double _area;
 
         public Rectangle(double length, double width)
         {
@@ -19,8 +20,8 @@ namespace Task1a
         }
         public override double CalcArea()
         {
-            area = Length * Width;
-            return area;
+            _area = Length * Width;
+            return _area;
         }
     }
 }

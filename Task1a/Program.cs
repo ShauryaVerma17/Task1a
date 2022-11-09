@@ -14,7 +14,7 @@ namespace Task1a
     class Program
     {
         //private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);  //Big line inside getlogger points to the class we are in 
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger("Program.cs");
+        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger("Program.cs");
         static void Main(string[] args)
         {
             double sideA;
@@ -22,6 +22,7 @@ namespace Task1a
             double sideC;
             double length;
             double width;
+
             try
             {
                 Console.WriteLine("Enter the side lengths for the Triangle\n");
@@ -43,7 +44,7 @@ namespace Task1a
                 if (sideA <= 0 || sideB <= 0 || sideC <= 0 || length <= 0 || width <= 0)
                 {
                     Console.WriteLine("Negative lengths are not allowed");
-                    log.Error("Invalid Length/s provided (Non Positive Lengths)");
+                    Log.Error("Invalid Length/s provided (Non Positive Lengths)");
                 }
                 else
                 {
@@ -53,8 +54,8 @@ namespace Task1a
                     Console.WriteLine("The Rectangle's area is {0}", rectangle.CalcArea());
                     Console.WriteLine("The Triangle's area is {0}", triangle.CalcArea());
 
-                    log.Info($"The area of the rectangle with sides {rectangle.Length} and {rectangle.Width} is {rectangle.CalcArea()}");
-                    log.Info($"The area of the triangle with sides {triangle.SideA}, {triangle.SideB} and {triangle.SideC} is {triangle.CalcArea()}");
+                    Log.Info($"The area of the rectangle with sides {rectangle.Length} and {rectangle.Width} is {rectangle.CalcArea()}");
+                    Log.Info($"The area of the triangle with sides {triangle.SideA}, {triangle.SideB} and {triangle.SideC} is {triangle.CalcArea()}");
 
                 }
 
@@ -64,7 +65,7 @@ namespace Task1a
             {
 
                 Console.WriteLine("Invalid Side Length");
-                log.Error("Invalid Length/s provided");
+                Log.Error("Invalid Length/s provided");
             }
 
             // Trying functionality
@@ -78,7 +79,7 @@ namespace Task1a
             //log.Info($"The area of the triangle with sides {triangle.SideA}, {triangle.SideB} and {triangle.SideC} is {triangle.CalcArea()}");
 
 
-            log.Debug("Application has reached the end");
+            Log.Debug("Application has reached the end");
             Console.ReadLine();
 
             

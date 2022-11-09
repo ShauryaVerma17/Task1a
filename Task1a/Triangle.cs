@@ -8,11 +8,12 @@ namespace Task1a
 {
     class Triangle : Shape
     {
-        public double SideA;
-        public double SideB;
-        public double SideC;
-        private double semiP;
-        private double area;
+        public double SideA { get; set; }
+        public double SideB { get; set; }
+        public double SideC { get; set; }
+
+        private double _semiP;
+        private double _area;
 
         public Triangle(double sideA, double sideB, double sideC)
         {
@@ -25,10 +26,11 @@ namespace Task1a
         public override double CalcArea()
         {
 
-            semiP = (SideA + SideB + SideC) / 2;
+            _semiP = (SideA + SideB + SideC) / 2;
 
-            area = Math.Sqrt((semiP) * (semiP - SideA) * (semiP - SideB) * (semiP - SideC));
-            return area;
+            _area = Math.Sqrt((_semiP) * (_semiP - SideA) * (_semiP - SideB) * (_semiP - SideC));
+
+            return _area;
         }
     }
 }
